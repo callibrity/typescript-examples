@@ -1,15 +1,17 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": false,
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "allowJs": true,
         "module": "commonjs",
         "target": "esnext",
         "jsx": "react",
-        "lib": ["dom", "esnext"]
+        "lib": ["dom", "esnext"],
+
+        // Strictness settings
+        "noImplicitAny": true, // Forces explicit type definition anywhere TypeScript can't assume what the type will be
+        "allowJs": true, // Restricts from using .js and .jsx files
+        "strictNullChecks": false, // Prevents referencing null or undefined values
+        "noImplicitReturns": false, // Requires all code paths to return a value
+        "allowSyntheticDefaultImports": true, // Prevents default imports from modules that don't have default exports
     },
     "include": [
         "./src/**/*"
